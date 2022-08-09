@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="TaxCalculator\Interface\" />
-    <Folder Include="TaxCalculator\Strategy\" />
+    <ProjectReference Include="..\TaxCalculator.Models\TaxCalculator.Models.csproj" />
+    <ProjectReference Include="..\TaxCalculator.Repository\TaxCalculator.Repository.csproj" />
   </ItemGroup>
 
 </Project>

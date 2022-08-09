@@ -1,0 +1,22 @@
+:host {
+    width: 100%;
+    padding: .75rem;
+    border: 1px black solid;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="number"].ng-invalid.ng-touched{
+    border: 2px red solid;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    /* -webkit-appearance: none; */
+    
+  }

@@ -1,0 +1,5 @@
+<main class="page-container" aria-expanded="false" #pageContainer>
+    <h1>UK Income Tax Calculator</h1>
+    <app-annual-salary-input (onUpdate)="onInputResult($event)"></app-annual-salary-input>
+    <app-annual-salary-output *ngIf="model && model.grossAnnualSalary > 0" [model]="model"></app-annual-salary-output>
+</main>

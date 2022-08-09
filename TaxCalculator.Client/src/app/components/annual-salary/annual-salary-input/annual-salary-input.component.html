@@ -1,0 +1,16 @@
+<form [formGroup]="annualSalaryForm" (ngSubmit)="onSubmit()">
+    <label for="gross-annual-salary">Gross Annual Salary</label>
+    <input required="true" id="gross-annual-salary" class="gbp" type="number" formControlName="grossAnnualSalary" step="0.1"
+        placeholder="20000.00">
+
+    <button [disabled]="annualSalaryForm.valid === false" type="submit" id="calculate-button" aria-busy="false" #calculateButton>Calculate</button>
+
+    <div *ngIf="grossAnnualSalary?.invalid && (grossAnnualSalary?.dirty || grossAnnualSalary?.touched)" class="alert">
+        <p *ngIf="grossAnnualSalary?.errors?.['required']" aria-alert="assertive" role="alert">
+            Gross annual salary is required.
+        </p>
+        <p *ngIf="grossAnnualSalary?.errors?.['min']" aria-alert="assertive" role="alert">
+            Gross annual salary should be at least £0.01.
+        </p>
+    </div>
+</form>
