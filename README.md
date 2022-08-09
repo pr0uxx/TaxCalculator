@@ -1,5 +1,5 @@
 ﻿# 🎊 UK Income Tax Calculator 🎊
-## ‼️ DISCLAIMER: In no way does this actually calculate proper income tax ‼️
+### ‼️DISCLAIMER: In no way does this actually calculate proper income tax‼️
 
 ## About
 
