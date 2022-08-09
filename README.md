@@ -13,13 +13,21 @@ The API backend uses swagger if you don't want to use the interface.
 - [node v16.16.0](https://nodejs.org/en/download/)
 - [npm v 8.3.0](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - [.NET 6.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- [SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
 ## Usage
 Before starting the website, please run navigate to 'TaxCalculator.Client' directory in your command line and run  `npm install`.
 
 (I highly recommend using visual studio. If you're not using visual studio, the rest might not apply to you.)
 
-Once you've done that, open the solution in visual studio and press 'Start'. This should run both the UI and the backend. You should have a window open swagger and another window open the angular UI.
+To get everyting running, open the solution in visual studio.
+
+The database is built using code first migrations so you will need to:
+Open Package Manager Console and type `Update-Database -StartupProject TaxCalculator.Api`. A load of database looking stuff should run and then you should see something like 'Done'. Yellow warnings are to be expected, anything red is bad and something has probably gone wrong.
+
+The project is built with some seed data. If you want to add or remove or update data, you're going to have to use SSMS.
+
+and press 'Start'. This should run both the UI and the backend. You should have a window open swagger and another window open the angular UI.
 
 If that didn't work, in solution explorer, right click solution and click 'properties' in the context menu. Navigate to 'Startup Project'. From here, select 'multiple startup projects' and make sure the action dropdown is set to 'Start' for both TaxCalculator.Api and TaxCalculator.Client. All of the other dropdowns should be set to none.
 
@@ -33,3 +41,7 @@ You can properly view the plan flowchart if you click [this mysterious link](htt
 
 - [EFCore](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore) - Standard ORM
 - [Moq](https://github.com/moq/moq4) - For mocking data in unit tests
+
+## Issues
+
+If you find something wrong or just want to complain about life, please raise an issue [over here](https://github.com/pr0uxx/TaxCalculator/issues). I might not be able to solve everything but I'm sure willing to try!
